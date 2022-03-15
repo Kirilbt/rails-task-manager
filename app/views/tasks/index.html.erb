@@ -1,6 +1,6 @@
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.completed %> - <%= link_to task.title, task_path(task) %></li>
+    <li> <%= task.completed ? '<i class="fa fa-light fa-square-check"></i>'.html_safe : '<i class="fa fa-regular fa-square"></i>'.html_safe %> - <%= link_to task.title, task_path(task) %></li>
   <% end %>
 
   <%= link_to "Create new task", new_task_path %>
